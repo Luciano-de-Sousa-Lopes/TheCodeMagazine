@@ -11,13 +11,12 @@
 body {
   color: #444;
   font-family: sans-serif;
-
   border-top: 10px solid #1098ad;
   position: relative;
 }
 
 .container {
-  width: 90rem;
+  width: 75rem;
   margin: 0 auto;
 }
 
@@ -80,7 +79,6 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
-  margin-bottom: 15px;
 }
 
 ul,
@@ -153,7 +151,7 @@ a:active {
 
 nav a:link {
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -193,7 +191,7 @@ h2::before {
 }
 
 /* FLOATS */
-.author-img {
+/* .author-img {
   float: left;
   margin-bottom: 1.25rem;
 }
@@ -237,5 +235,82 @@ h4 {
 footer {
   clear: both;
   text-align: center;
+  color: gray;
+} */
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__title {
+  display: flex;
+  align-items: center;
+}
+
+.post-header__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main-container {
+  display: flex;
+  gap: 3rem;
+}
+
+article {
+  flex: 1 1 auto;
+}
+
+aside {
+  padding: 1rem;
+  margin-top: 9rem;
+  align-self: flex-start;
+}
+
+aside h4 {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.related li {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img-container {
+  padding: 0.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/laura-jones.jpg) center/cover no-repeat;
+  border-radius: 100%;
+  outline: 0.35rem dotted hotpink;
+  transition: all 2s;
+}
+
+.related li img {
+  border-radius: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+  transition: all 0.5s;
+}
+
+.img-container:hover img {
+  transform: translateY(-2.5rem) rotateX(70deg);
+}
+
+.related li a {
+  display: inline-block;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 0.25rem;
+}
+
+.related li p {
+  font-size: 0.7rem;
   color: gray;
 }
